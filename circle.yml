@@ -1,6 +1,12 @@
 machine:
-  golang:
-    version: 1.4
+  pre:
+    - curl -o go14.tar.gz -sL https://golang.org/dl/go1.4.linux-amd64.tar.gz
+    - mkdir /home/ubuntu/go14
+    - tar -C /home/ubuntu/go14 -xzf go14.tar.gz
+    - sudo chmod a+w /home/ubuntu/go14/go
+  environment:
+    PATH: /home/ubuntu/go14/go/bin:$PATH
+    GOROOT: /home/ubuntu/go14/go
   ruby:
     version: 2.1.3
 

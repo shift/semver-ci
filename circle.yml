@@ -1,4 +1,6 @@
 machine:
+  services:
+    - docker
   pre:
     - curl -o go14.tar.gz -sL https://golang.org/dl/go1.4.linux-amd64.tar.gz
     - mkdir /home/ubuntu/go14
@@ -9,6 +11,9 @@ machine:
     GOROOT: /home/ubuntu/go14/go
   ruby:
     version: 2.1.3
+  override:
+    - docker info
+    - docker build -t ticklish/atftpd .
 
 test:
   override:

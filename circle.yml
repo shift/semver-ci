@@ -14,3 +14,4 @@ test:
   override:
     - make build && ./semver-ci &
     - make test
+    - make docker

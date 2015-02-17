@@ -20,16 +20,10 @@ func version(w http.ResponseWriter, r * http.Request){
   }
 
   incr := r.FormValue("incr")
-  if incr == "patch" {
-    v.Patch++;
-  }
-
-  if incr == "minor" {
-    v.Minor++;
-  }
-
-  if incr == "major" {
-    v.Major++;
+  switch incr {
+  case "patch": v.Patch++
+  case "minor": v.Minor++
+  case "major": v.Major++
   }
 
   rsp := fmt.Sprintf("{\"version\": %q}\n", v)

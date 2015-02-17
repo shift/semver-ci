@@ -6,6 +6,7 @@ build:
 
 test: build
 	bundle install
+	./semver-ci &
 	bundle exec cucumber
 
 docker: test

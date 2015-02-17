@@ -1,0 +1,26 @@
+{
+  "id": "semver-ci-controller",
+  "kind": "ReplicationController",
+  "apiVersion": "v1beta2",
+  "desiredState": {
+    "replicas": 1,
+    "replicaSelector": {"name": "semver-ci"},
+    "podTemplate": {
+      "desiredState": {
+        "manifest": {
+          "version": "v1beta1",
+          "id": "semver-ci-controller",
+          "containers": [{
+            "name": "semver-ci",
+            "image": "shift/semver-ci",
+            "ports": [{"containerPort": 8000, "hostPort": 8000}]
+          }]
+        }
+      },
+      "labels": {
+        "name": "semver-ci"
+      }
+    }
+  },
+  "labels": {"name": "semver-ci"}
+}

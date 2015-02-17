@@ -4,7 +4,7 @@ machine:
     - mkdir /home/ubuntu/go14
     - tar -C /home/ubuntu/go14 -xzf go14.tar.gz
     - sudo chmod a+w /home/ubuntu/go14/go
-    - /home/ubuntu/go14/go get github.com/pointlander/peg
+    - go get github.com/pointlander/peg
   environment:
     PATH: /home/ubuntu/go14/go/bin:$PATH
     GOROOT: /home/ubuntu/go14/go

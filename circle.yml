@@ -2,6 +2,8 @@ machine:
   services:
     - docker
   pre:
+    - git config --global user.email "automation@tickli.sh"
+    - git config --global user.name "CircleCI"
     - curl -o go14.tar.gz -sL https://golang.org/dl/go1.4.linux-amd64.tar.gz
     - mkdir /home/ubuntu/go14
     - tar -C /home/ubuntu/go14 -xzf go14.tar.gz

@@ -11,12 +11,10 @@ machine:
     GOROOT: /home/ubuntu/go14/go
   ruby:
     version: 2.1.3
-  override:
-    - docker info
-    - docker build -t ticklish/atftpd .
 
 test:
   override:
+    - docker info
     - make build && ./semver-ci &
     - make test
     - make docker

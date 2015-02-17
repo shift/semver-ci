@@ -1,6 +1,6 @@
 # semver-ci
 
-Simple Go library for providing semver increments.
+Simple Go container (basic WS) for providing semver increments.
 
 The Makefile does most of the things you'd expect.
 

@@ -18,3 +18,4 @@ test:
     - make build && ./semver-ci &
     - make test
     - make docker
+    - make update

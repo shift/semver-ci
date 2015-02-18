@@ -2,9 +2,8 @@
   "id": "semver-ci",
   "kind": "Service",
   "apiVersion": "v1beta2",
-  "port": 69,
-  "protocol": "UDP",
-  "containerPort": 69,
+  "port": 8123,
+  "containerPort": 8000,
   "selector": {
     "name": "semver-ci"
   },
